@@ -1,0 +1,72 @@
+[
+  {
+    "id": "EMP120215",
+    "name": "Hazal Nutt",
+    "email": "hazelnutt@email.com",
+    "role": "UI/UX Designer",
+    "status": "full-time"
+  },
+  {
+    "id": "EMP120216",
+    "name": "Kieran Holt",
+    "email": "kieran.holt@email.com",
+    "role": "Frontend Developer",
+    "status": "part-time"
+  },
+  {
+    "id": "EMP120217",
+    "name": "Amira Khan",
+    "email": "amira.khan@email.com",
+    "role": "Backend Developer",
+    "status": "full-time"
+  },
+  {
+    "id": "EMP120218",
+    "name": "Lucas Zhang",
+    "email": "lucas.zhang@email.com",
+    "role": "Project Manager",
+    "status": "freelance"
+  },
+  {
+    "id": "EMP120219",
+    "name": "Sofia Anders",
+    "email": "sofia.anders@email.com",
+    "role": "QA Engineer",
+    "status": "full-time"
+  },
+  {
+    "id": "EMP120220",
+    "name": "Diego Martinez",
+    "email": "diego.m@email.com",
+    "role": "DevOps Engineer",
+    "status": "full-time"
+  },
+  {
+    "id": "EMP120221",
+    "name": "Emily Wright",
+    "email": "emily.wright@email.com",
+    "role": "UI/UX Designer",
+    "status": "part-time"
+  },
+  {
+    "id": "EMP120222",
+    "name": "Jamal Green",
+    "email": "jamal.green@email.com",
+    "role": "Product Owner",
+    "status": "full-time"
+  },
+  {
+    "id": "EMP120223",
+    "name": "Aiko Tanaka",
+    "email": "aiko.t@email.com",
+    "role": "Frontend Developer",
+    "status": "freelance"
+  },
+  {
+    "id": "EMP120224",
+    "name": "Benicio Silva",
+    "email": "benicio.silva@email.com",
+    "role": "Data Analyst",
+    "status": "full-time"
+  }
+]
