@@ -3,7 +3,7 @@ import CreateForm from "./ui/CreateForm";
 import { useState } from "react";
 
 export default function App() {
-  const [openCreateForm, setOpenCreateForm] = useState<boolean>(true);
+  const [openCreateForm, setOpenCreateForm] = useState<boolean>(false);
   return (
     <main className="bg-slate-200 w-full min-h-screen flex flex-col">
       <section className="flex flex-col gap-12 mt-24">
