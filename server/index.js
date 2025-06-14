@@ -71,7 +71,6 @@ app.post("/employees", async (req, res) => {
 
     const newEmployee = { id, name, email, role, status };
     employees.push(newEmployee);
-    console.log(employees[0]);
 
     await writeJsonFile(employeesPath, employees);
     res.status(200).json({ message: "Employee created successfully" });
