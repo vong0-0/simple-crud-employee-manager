@@ -1,3 +1,4 @@
+import axios from "axios";
 import type { ReactNode } from "react";
 
 interface Employee {
@@ -30,20 +31,19 @@ export default function EditForm({
     const role = formData.get("role");
     const status = formData.get("status");
 
+    const updatedEmployee = {
+      id,
+      employeeName,
+      email,
+      role,
+      status,
+    };
+
     try {
-      await fetch(`http://localhost:3000/employees/${employee.id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          id,
-          employeeName,
-          email,
-          role,
-          status,
-        }),
-      });
+      await axios.put(
+        `http://localhost:3000/employees/${employee.id}`,
+        updatedEmployee
+      );
 
       close();
       console.log(`Update employee ID: ${id} successful`);

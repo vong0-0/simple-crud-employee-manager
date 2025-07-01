@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState, type ReactNode } from "react";
 
 interface Employee {
@@ -20,18 +21,18 @@ export default function CreateForm({ close }: { close: () => void }) {
     const role = formData.get("role");
     const status = formData.get("status");
 
-    await fetch("http://localhost:3000/employees", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        role: role,
-        status: status,
-      }),
-    });
+    const newEmployee = {
+      name: name,
+      email: email,
+      role: role,
+      status: status,
+    };
+
+    const response = await axios.post(
+      "http://localhost:3000/employees",
+      newEmployee
+    );
+    console.log(response);
 
     close();
   }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Pen } from "lucide-react";
 import { DeleteRecord } from "./buttons";
 import EditForm from "./EditForm";
+import axios from "axios";
 
 interface Employee {
   id: string;
@@ -29,18 +30,18 @@ export default function EmployeeTable() {
   useEffect(() => {
     async function fetchEmployees() {
       try {
-        const response: Response = await fetch(
+        const response = await axios.get<Employee[]>(
           "http://localhost:3000/employees"
         );
-        const employees: Employee[] = await response.json();
-        setEmployees(employees || []);
+        console.log(response.status);
+        setEmployees(response.data || []);
       } catch (error) {
         console.error("Employees fetching is fails", error);
       }
     }
 
     fetchEmployees();
-  }, [employees]);
+  }, []);
 
   return (
     <div className="rounded-lg overflow-x-auto">

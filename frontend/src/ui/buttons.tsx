@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Trash } from "lucide-react";
 
 export function DeleteRecord({
@@ -7,10 +8,11 @@ export function DeleteRecord({
   id: string;
   employeeName: string;
 }) {
-  function handleDeleteRecord() {
-    fetch(`http://localhost:3000/employees/${id}`, {
-      method: "DELETE",
-    });
+  async function handleDeleteRecord() {
+    const response = await axios.delete(
+      `http://localhost:3000/employees/${id}`
+    );
+    console.log(response.data);
   }
   return (
     <button
